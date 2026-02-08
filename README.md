@@ -84,7 +84,7 @@ heart-disease-prediction-app/
 ## ▶️ Run Locally
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/heart-disease-prediction-app.git
-cd heart-disease-prediction-app
+git clone https://github.com/Aarushi1512006/Heart-Disease-Prediction
+cd Heart-Disease-Prediction
 pip install -r requirements.txt
 streamlit run app.py
