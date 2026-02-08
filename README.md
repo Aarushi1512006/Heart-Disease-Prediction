@@ -1,67 +1,90 @@
-# ❤️ Heart Disease Prediction
+# ❤️ Heart Disease Prediction Web App (CardioCheck AI)
 
-## 📌 Project Overview
-This project focuses on performing **Exploratory Data Analysis (EDA)** and **feature engineering** on the Heart Disease dataset to understand the factors influencing heart disease and to prepare the data for future predictive modeling.
+An end-to-end **Machine Learning web application** that predicts the likelihood of heart disease based on patient clinical parameters.  
+The project combines **ML model training, data preprocessing, and a user-friendly frontend** built using **Streamlit**.
 
-The goal is to extract meaningful insights from the data and create an ML-ready dataset.
-
----
-
-## 📊 Dataset Information
-- Dataset name: `heart.csv`
-- Domain: Healthcare
-- Target variable:
-  - `target = 0` → No heart disease
-  - `target = 1` → Presence of heart disease
-
-The dataset contains medical attributes such as age, sex, chest pain type, cholesterol levels, maximum heart rate, and more.
+> ⚠️ **Disclaimer:** This application is for **educational purposes only** and must not be considered a medical diagnosis tool.
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
-The following EDA steps were performed:
-
-- Data loading and inspection
-- Shape, data types, and missing value analysis
-- Statistical summary of numerical features
-- Distribution analysis of numerical and categorical variables
-- Target-based analysis to identify patterns related to heart disease
-- Feature-wise comparison with the target variable
+## 🚀 Live Demo
+👉 https://heart-disease-prediction-g9rz8emrgkuzwj2bc2qcdf.streamlit.app/
 
 ---
 
-## 🛠️ Feature Engineering
-- Identification of categorical and numerical features
-- Encoding of categorical variables
-- Data transformation to make the dataset suitable for machine learning models
+## 📌 Features
+- Interactive and clean **Streamlit UI**
+- Predicts **heart disease risk** with probability score
+- Uses trained **Logistic Regression** model
+- Handles categorical data using **One-Hot Encoding**
+- Feature scaling with **StandardScaler**
+- End-to-end ML pipeline (training → saving → deployment)
 
 ---
 
-## 📈 Key Insights
-- Certain chest pain types show a higher association with heart disease
-- Features like maximum heart rate, age, and exercise-induced angina play an important role
-- The dataset is balanced and well-structured for predictive modeling
+## 🧠 Machine Learning Details
+- **Algorithm:** Logistic Regression  
+- **Problem Type:** Binary Classification  
+- **Preprocessing:**
+  - One-Hot Encoding for categorical features
+  - Feature scaling using StandardScaler
+- **Output:**
+  - Prediction (High Risk / Normal)
+  - Probability of heart disease
 
 ---
 
-## 🚀 Next Steps
-- Build machine learning models such as:
-  - Logistic Regression
-  - Random Forest
-- Evaluate model performance using accuracy and confusion matrix
-- Hyperparameter tuning for better performance
+## 🩺 Input Parameters
+The model uses the following clinical inputs:
+- Age
+- Sex
+- Chest Pain Type
+- Resting Blood Pressure
+- Cholesterol
+- Fasting Blood Sugar
+- Resting ECG
+- Max Heart Rate
+- Exercise Induced Angina
+- Oldpeak (ST Depression)
+- ST Slope
 
 ---
 
-## 🧰 Technologies Used
+## 🛠️ Tech Stack
 - Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Google Colab
+- Pandas, NumPy
+- Scikit-learn
+- Streamlit
+- Joblib
+- Git & GitHub
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
+heart-disease-prediction-app/
+│
+├── app.py
 
+├── heart_disease_model.ipynb
+
+├── heart_disease_model.pkl
+
+├── scaler.pkl
+
+├── model_columns.pkl
+
+├── requirements.txt
+
+├── README.md
+
+└── .gitignore
+
+---
+
+## ▶️ Run Locally
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/heart-disease-prediction-app.git
+cd heart-disease-prediction-app
+pip install -r requirements.txt
+streamlit run app.py
